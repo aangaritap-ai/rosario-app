@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Rosario y Novenas</title>
+    <meta name="description" content="Reza el Santo Rosario con voz guiada y sigue 10 novenas tradicionales." />
+    <meta name="theme-color" content="#0e2a4d" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="icon" href="icons/icon-192.png" />
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Rosario" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <div id="install-banner" hidden class="install-banner">
+      <span class="install-text">Instala esta app en tu celular para rezar sin conexión.</span>
+      <div class="install-actions">
+        <button id="btn-install" class="btn-install-action">Instalar</button>
+        <button id="btn-dismiss-install" class="btn-install-dismiss" aria-label="Cerrar">✕</button>
+      </div>
+    </div>
+
+    <script type="module" src="js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,132 @@
+<svg viewBox="0 0 600 900" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bcdcf7"/>
+      <stop offset="55%" stop-color="#e3f0fb"/>
+      <stop offset="100%" stop-color="#f6fafd"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff6d8"/>
+      <stop offset="45%" stop-color="#f3d98a"/>
+      <stop offset="100%" stop-color="#f3d98a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="mantle" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2f5f9e"/>
+      <stop offset="55%" stop-color="#3f74b8"/>
+      <stop offset="100%" stop-color="#5b8fd1"/>
+    </linearGradient>
+    <linearGradient id="mantleShade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#264d80"/>
+      <stop offset="100%" stop-color="#264d80" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="robe" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#dbe9f8"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e8c766"/>
+      <stop offset="100%" stop-color="#b8860b"/>
+    </linearGradient>
+    <radialGradient id="face" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#fdf1e3"/>
+      <stop offset="100%" stop-color="#f4dcc4"/>
+    </radialGradient>
+    <path id="star-template" d="M0,-9 L2.4,-2.6 L9,-2.8 L3.6,1.6 L5.6,8.2 L0,4.2 L-5.6,8.2 L-3.6,1.6 L-9,-2.8 L-2.4,-2.6 Z"/>
+  </defs>
+
+  <rect x="0" y="0" width="600" height="900" fill="url(#sky)"/>
+
+  <!-- halo -->
+  <circle cx="300" cy="255" r="210" fill="url(#halo)"/>
+
+  <!-- estrellas en arco sobre la corona -->
+  <g fill="#e8c766">
+    <use href="#star-template" transform="translate(150,150) scale(0.8)"/>
+    <use href="#star-template" transform="translate(185,110) scale(0.85)"/>
+    <use href="#star-template" transform="translate(225,80) scale(0.9)"/>
+    <use href="#star-template" transform="translate(265,62) scale(0.95)"/>
+    <use href="#star-template" transform="translate(300,55) scale(1)"/>
+    <use href="#star-template" transform="translate(335,62) scale(0.95)"/>
+    <use href="#star-template" transform="translate(375,80) scale(0.9)"/>
+    <use href="#star-template" transform="translate(415,110) scale(0.85)"/>
+    <use href="#star-template" transform="translate(450,150) scale(0.8)"/>
+  </g>
+
+  <!-- manto azul -->
+  <path d="M300,190
+           C220,210 150,260 120,340
+           C90,420 95,520 100,620
+           C104,700 112,780 140,850
+           L460,850
+           C488,780 496,700 500,620
+           C505,520 510,420 480,340
+           C450,260 380,210 300,190 Z"
+        fill="url(#mantle)"/>
+  <path d="M300,190 C260,215 235,260 232,320 C229,400 235,520 240,620 L215,850 L140,850
+           C112,780 104,700 100,620 C95,520 90,420 120,340 C150,260 220,210 300,190 Z"
+        fill="url(#mantleShade)" opacity="0.55"/>
+
+  <!-- capucha del manto sobre la cabeza -->
+  <path d="M300,120 C245,120 205,165 200,225 C198,255 205,285 222,305
+           C226,250 260,200 300,200 C340,200 374,250 378,305
+           C395,285 402,255 400,225 C395,165 355,120 300,120 Z"
+        fill="url(#mantle)"/>
+
+  <!-- rostro -->
+  <ellipse cx="300" cy="250" rx="58" ry="70" fill="url(#face)"/>
+
+  <!-- corona -->
+  <g fill="url(#gold)">
+    <path d="M250,140 L262,100 L278,132 L300,90 L322,132 L338,100 L350,140 Z"/>
+    <rect x="248" y="138" width="104" height="16" rx="4"/>
+    <circle cx="300" cy="80" r="7"/>
+    <rect x="296" y="60" width="8" height="20"/>
+    <rect x="288" y="66" width="24" height="8"/>
+  </g>
+
+  <!-- tunica blanca -->
+  <path d="M300,300
+           C270,330 245,380 235,440
+           C220,540 215,650 225,850
+           L375,850
+           C385,650 380,540 365,440
+           C355,380 330,330 300,300 Z"
+        fill="url(#robe)"/>
+  <path d="M300,300 C280,340 265,400 260,460 C250,560 252,680 262,850 L225,850
+           C215,650 220,540 235,440 C245,380 270,330 300,300 Z"
+        fill="#c9dcf2" opacity="0.5"/>
+
+  <!-- manos con rayos dorados -->
+  <g stroke="url(#gold)" stroke-width="3" stroke-linecap="round" opacity="0.85">
+    <line x1="185" y1="470" x2="90" y2="560"/>
+    <line x1="185" y1="470" x2="100" y2="600"/>
+    <line x1="185" y1="470" x2="120" y2="635"/>
+    <line x1="185" y1="470" x2="150" y2="660"/>
+    <line x1="415" y1="470" x2="510" y2="560"/>
+    <line x1="415" y1="470" x2="500" y2="600"/>
+    <line x1="415" y1="470" x2="480" y2="635"/>
+    <line x1="415" y1="470" x2="450" y2="660"/>
+  </g>
+  <ellipse cx="185" cy="465" rx="20" ry="28" fill="url(#face)" transform="rotate(-20 185 465)"/>
+  <ellipse cx="415" cy="465" rx="20" ry="28" fill="url(#face)" transform="rotate(20 415 465)"/>
+
+  <!-- nube / base -->
+  <g fill="#ffffff">
+    <ellipse cx="300" cy="855" rx="180" ry="26"/>
+    <ellipse cx="200" cy="860" rx="70" ry="18"/>
+    <ellipse cx="400" cy="860" rx="70" ry="18"/>
+  </g>
+  <path d="M230,845 C255,825 345,825 370,845 L360,858 L240,858 Z" fill="url(#gold)" opacity="0.9"/>
+
+  <!-- rosas decorativas -->
+  <g transform="translate(70,800)">
+    <circle r="14" fill="#c65a6b"/>
+    <circle r="8" fill="#e08a97"/>
+    <path d="M0,14 C-18,26 -24,40 -20,58 C-6,48 8,40 14,20 Z" fill="#4c7a4f"/>
+  </g>
+  <g transform="translate(530,800)">
+    <circle r="14" fill="#c65a6b"/>
+    <circle r="8" fill="#e08a97"/>
+    <path d="M0,14 C18,26 24,40 20,58 C6,48 -8,40 -14,20 Z" fill="#4c7a4f"/>
+  </g>
+</svg>
